@@ -5,7 +5,9 @@
   "scripts": {
     "client": "webpack-dev-server --progress",
     "server": "nodemon --watch src/server src/server/index.js",
-    "buildui": "rimraf dist && webpack --progress"
+    "buildui": "rimraf dist && webpack --progress",
+    "heroku-postbuild": "npm run buildui",
+    "start": "cross-env NODE_ENV=production node src/server/index.js"
   },
   "keywords": [],
   "author": "",
